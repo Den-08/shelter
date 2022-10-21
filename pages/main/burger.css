@@ -2,13 +2,16 @@
     display: none;
 }
 
+.noscroll {
+    overflow: hidden;
+}
+
 @media (max-width: 767px) {
     .burger {
         display: flex;
         align-items: center;
         padding: 5px 5px;
         margin-right: 38px;
-
     }
 
     .burger__link {
