@@ -188,14 +188,6 @@ button:hover {
     align-items: center;
 }
 
-.burger {
-    display: none;
-}
-
-.burger__line {
-    display: none;
-}
-
 .hero__content {
     padding-bottom: 24px;
     max-width: 460px;
@@ -631,34 +623,6 @@ button:hover {
         display: none;
     }
 
-    .burger {
-        display: flex;
-        align-items: center;
-        /* background-color: red; */
-        padding: 5px 5px;
-        margin-right: 38px;
-    }
-
-    .burger__link {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 30px;
-        height: 30px;
-    }
-
-    .burger__link_active {
-        transform: rotate(90deg);
-    }
-
-    .burger__line {
-        display: block;
-        width: 30px;
-        height: 0;
-        border: 2px solid #F1CDB3;
-        background-color: #F1CDB3;
-    }
-
     .content_title {
         font-family: 'Georgia';
         font-style: normal;
@@ -851,7 +815,7 @@ button:hover {
 
     .footer__content {
         padding-top: 0;
-        max-height: 809px;
+        max-height: 810px;
     }
 
     .footer__content_title {
@@ -866,10 +830,6 @@ button:hover {
         margin-top: 30px;
         align-items: center;
     }
-
-    /* .footer__content_title {
-        margin-top: 42px;
-    } */
 
     .footer__content_text-column {
         margin-top: 42px;
