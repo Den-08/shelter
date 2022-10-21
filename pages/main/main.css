@@ -118,6 +118,7 @@ button:hover {
 .logo {
     display: flex;
     flex-direction: column;
+    z-index: 30;
 }
 
 .logo__title {
