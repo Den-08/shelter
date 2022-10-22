@@ -86,9 +86,9 @@ button:hover {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
-    font-size: 44px;
+    font-size: 35px;
     line-height: 130%;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.055em;
     color: #545454;
 }
 
@@ -201,7 +201,7 @@ button:hover {
     padding-top: 4px;
     width: 32.0rem;
     color: #FFFFFF;
-    font-size: 4.4rem;
+    font-size: 44px;
     letter-spacing: 0em;
 }
 
@@ -215,11 +215,11 @@ button:hover {
 }
 
 .hero__image {
-    padding-top: 60px;
+    padding-top: 58px;
 }
 
 .about__content {
-    padding: 82px 115px 100px 115px;
+    padding: 79px 115px 100px 115px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -364,8 +364,8 @@ button:hover {
 }
 
 .donation {
-    padding-top: 8rem;
-    padding-bottom: 10rem;
+    padding-top: 80px;
+    padding-bottom: 101px;
     background: #F6F6F6;
 }
 
@@ -388,7 +388,7 @@ button:hover {
     font-weight: normal;
     font-size: 3.5rem;
     line-height: 130%;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
     font-size: 15px;
     line-height: 110%;
     color: #545454;
@@ -431,7 +431,7 @@ button:hover {
 }
 
 .footer__content {
-    padding-top: 40px;
+    padding-top: 39px;
 }
 
 .footer__text {
@@ -445,8 +445,14 @@ button:hover {
     justify-content: space-around;
 }
 
+.footer__subtitle-block div:nth-child(2) {
+    padding-top: 32px;
+    padding-bottom: 4px;
+}
+
 .footer__content_text-column {
     display: flex;
+    align-items: center;
 }
 
 .footer__text-block--first {
@@ -554,7 +560,8 @@ button:hover {
     }
 
     .donation {
-        padding-bottom: 9.6rem;
+        padding-bottom: 97px;
+        padding-top: 82px;
     }
 
     .donation__content_subtitle {
@@ -581,7 +588,6 @@ button:hover {
 
     .footer__content_title-next {
         font-size: 20px;
-        letter-spacing: normal;
     }
 
     .footer__text {
@@ -593,11 +599,10 @@ button:hover {
     }
 
     .footer__content {
-        padding-top: 30px;
+        padding-top: 32px;
     }
 
     .footer__content_text-block {
-        /* width: 279px; */
         height: 100%;
         padding: 0;
         display: flex;
@@ -609,8 +614,12 @@ button:hover {
         margin-right: 0;
     }
 
+    .footer__subtitle-block div:nth-child(2) {
+        padding-bottom: 0px;
+    }
+
     .footer__image {
-        margin-top: 64px;
+        margin-top: 62px;
     }
 }
 
@@ -619,10 +628,6 @@ button:hover {
     .wrapper {
         margin: 0 10px;
     }
-
-    /* .menu {
-        display: none;
-    } */
 
     .content_title {
         font-family: 'Georgia';
@@ -848,6 +853,10 @@ button:hover {
     .footer__content_text-column--last {
         margin-top: 37px;
         align-self: flex-start;
+    }
+
+    .footer__subtitle-block div:nth-child(2) {
+        padding-top: 0px;
     }
 
     .footer__text_img {
