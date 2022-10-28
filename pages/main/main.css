@@ -63,7 +63,7 @@ button:hover {
 
 .button_arrow {
     display: flex;
-    width: 52px;
+    min-width: 52px;
     height: 52px;
     outline: none;
     box-shadow: inset 0 0 0 2px #F1CDB3;
@@ -258,7 +258,7 @@ button:hover {
     text-align: center;
 }
 
-.pets__content_slider {
+.pets__cards {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -266,12 +266,22 @@ button:hover {
     justify-content: space-between;
 }
 
-.pets__content_cards {
-    width: 82.5%;
+.pets__area {
+    /* width: 82.5%; */
+    /* display: flex; */
+    /* flex-direction: row;
+    align-items: center; */
+    /* justify-content: space-between; */
+    /* column-gap: 90px; */
+}
+
+.pets__line {
+    /* width: 82.5%; */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    column-gap: 90px;
 }
 
 .pets__card {
@@ -304,6 +314,10 @@ button:hover {
     color: #545454;
 }
 
+.pets__button {
+    width: 261px;
+}
+
 .card__button {
     width: 187px;
     background: none;
@@ -311,12 +325,12 @@ button:hover {
     border: none;
 }
 
-.button_arrow_prev2 {
-    display: none;
+.button_arrow_prev {
+    margin-right: 14px;
 }
 
-.pets__button {
-    width: 261px;
+.button_arrow_prev2 {
+    display: none;
 }
 
 .help {
@@ -547,8 +561,13 @@ button:hover {
         display: none;
     }
 
-    .pets__content_cards {
+    .pets__area {
         justify-content: space-between;
+    }
+
+    .pets__line {
+        justify-content: space-between;
+        column-gap: 40px;
     }
 
     .help__content_grid {
@@ -695,12 +714,16 @@ button:hover {
         padding-bottom: 42px;
     }
 
-    .pets__content_slider {
+    .pets__cards {
         flex-direction: column;
     }
 
-    .pets__content_cards {
+    .pets__area {
         justify-content: center;
+    }
+
+    .pets__line {
+        /* justify-content: center; */
     }
 
     .pets__card_hide2 {
@@ -716,7 +739,7 @@ button:hover {
         margin-right: 82px;
     }
 
-    .pets__slider-buttons2 {
+    .pets__buttons2 {
         display: flex;
         padding-top: 19px;
     }

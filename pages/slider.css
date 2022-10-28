@@ -1,0 +1,32 @@
+.slider {}
+
+.slider__area {
+    width: 990px;
+    /* display: block; */
+    overflow: hidden;
+}
+
+.slider__line {
+    /* display: flex; */
+    position: relative;
+    left: 0;
+    /* column-gap: 90px; */
+}
+
+.slider__card {}
+
+@media (max-width: 1279px) {
+    .slider__area {
+        width: 580px;
+    }
+
+    .slider__line {
+        /* column-gap: 40px; */
+    }
+}
+
+@media (max-width: 767px) {
+    .slider__area {
+        width: 270px;
+    }
+}

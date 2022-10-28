@@ -257,7 +257,6 @@ button:hover {
 }
 
 .pets__content {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -466,7 +465,11 @@ button:hover {
 }
 
 .footer__content {
-    padding-top: 40px;
+    padding-top: 39px;
+}
+
+.footer__text {
+    display: flex;
 }
 
 .footer__content_text-block {
@@ -476,8 +479,18 @@ button:hover {
     justify-content: space-around;
 }
 
+.footer__subtitle-block div:nth-child(2) {
+    padding-top: 32px;
+    padding-bottom: 4px;
+}
+
 .footer__content_text-column {
     display: flex;
+    align-items: center;
+}
+
+.footer__text-block--first {
+    margin-right: 160px;
 }
 
 .footer__content_title {
@@ -499,6 +512,7 @@ button:hover {
 .footer {
     background: url(../../assets/noise_transparent_2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
+
 
 @media (max-width: 1279px) {
     .wrapper {

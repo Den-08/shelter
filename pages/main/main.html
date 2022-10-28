@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../normalize.css" />
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="stylesheet" type="text/css" href="../burger.css" />
+    <link rel="stylesheet" type="text/css" href="../slider.css" />
 </head>
 
 <body>
@@ -112,36 +113,47 @@
                 <h3 class="pets__content_title content_title">
                     <span>Our friends who</span><span> are looking for a house</span>
                 </h3>
-                <div class="pets__content_slider">
-                    <button class="button_arrow button_arrow_prev">
+
+                <div class="pets__cards slider">
+
+                    <button class="button_arrow button_arrow_prev slider__prev">
                         <img src="../../assets/icons/arrow.svg" alt="previous">
                     </button>
-                    <div class="pets__content_cards">
-                        <div class="pets__card">
-                            <img src="../../assets/images/pets-katrine.png" alt="pets-katrine">
-                            <p>Katrine</p>
-                            <button class="button_primary card__button">Learn more</button>
-                        </div>
-                        <div class="pets__card pets__card_hide2">
-                            <img src="../../assets/images/pets-jennifer.png" alt="pets-jennifer">
-                            <p>Jennifer</p>
-                            <button class="button_primary card__button">Learn more</button>
-                        </div>
-                        <div class="pets__card pets__card_hide1">
-                            <img src="../../assets/images/pets-woody.png" alt="pets-woody">
-                            <p>Woody</p>
-                            <button class="button_primary card__button">Learn more</button>
+
+
+                    <div class="pets__area slider__area">
+                        <div class="pets__line slider__line">
+                            <div class="pets__card slider__card">
+                                <img src="../../assets/images/pets-katrine.png" alt="pets-katrine">
+                                <p>Katrine</p>
+                                <button class="button_primary card__button">Learn more</button>
+                            </div>
+                            <!-- pets__card_hide2 -->
+                            <div class="pets__card slider__card">
+                                <img src="../../assets/images/pets-jennifer.png" alt="pets-jennifer">
+                                <p>Jennifer</p>
+                                <button class="button_primary card__button">Learn more</button>
+                            </div>
+                            <!-- pets__card_hide1 -->
+                            <div class="pets__card slider__card">
+                                <img src="../../assets/images/pets-woody.png" alt="pets-woody">
+                                <p>Woody</p>
+                                <button class="button_primary card__button">Learn more</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="pets__slider-buttons2">
-                        <button class="button_arrow button_arrow_prev2">
+
+
+                    <div class="pets__buttons2">
+                        <button class="button_arrow button_arrow_prev2 slider__prev">
                             <img src="../../assets/icons/arrow.svg" alt="previous">
                         </button>
-                        <button class="button_arrow button_arrow_next">
+                        <button class="button_arrow button_arrow_next slider__next">
                             <img src="../../assets/icons/arrow.svg" alt="next">
                         </button>
                     </div>
                 </div>
+
                 <a href="../pets/pets.html"><button class="button_primary pets__button">Get to know the
                         rest</button></a>
             </div>
@@ -279,7 +291,8 @@
         </footer>
     </main>
 
-    <script src="../script.js"></script>
+    <script src="../burger.js"></script>
+    <script src="../slider.js"></script>
 </body>
 
 </html>
