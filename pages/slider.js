@@ -15,6 +15,8 @@ function funcSliderInit() {
 function funcSliderRender(clicksCount) {
     let sliderOffset = clicksCount * funcSliderInit();
     sliderLine.style.left = `${sliderOffset}px`;
+    if (clicksCount === 0) { sliderPrev.forEach((i) => i.classList.add('inactive')) } else { sliderPrev.forEach((i) => i.classList.remove('inactive')) };
+    if (clicksCount === (-(sliderCards.length - funcSliderViewed()))) { sliderNext.classList.add('inactive') } else { sliderNext.classList.remove('inactive') }
 }
 
 function funcSliderMove(clicksNumber) {
@@ -34,12 +36,11 @@ function funcSliderViewed() {
     let sliderLineWidthViewed = Number(window.getComputedStyle(sliderLine).width.slice(0, -2));   // ширина строки со слайдами
     let sliderCardWidthViewed = Number(window.getComputedStyle(sliderCards[0]).width.slice(0, -2)); // ширина 1 слайда
     let sliderLineColumnGap = Number(window.getComputedStyle(sliderLine).columnGap.slice(0, -2));   // ширина между слайдами
-
     let viewed = (sliderLineWidthViewed - sliderLineWidthViewed % sliderCardWidthViewed) / sliderCardWidthViewed;
-
     return viewed;
 }
 
+funcSliderRender(sliderOffsetClicks);
 // обработчики событий
 window.addEventListener('resize', () => {
     funcSliderRender(sliderOffsetClicks);
