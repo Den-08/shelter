@@ -74,7 +74,7 @@ button:hover {
     background: none;
 }
 
-.button_arrow :disabled {
+.button_arrow.inactive {
     box-shadow: inset 0 0 0 2px #CDCDCD;
 }
 
