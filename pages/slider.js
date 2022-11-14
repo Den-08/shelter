@@ -1,26 +1,48 @@
 const sliderLine = document.querySelector('.slider__line');
 const sliderPrev = document.querySelectorAll('.slider__prev');
 const sliderNext = document.querySelector('.slider__next');
-const sliderCard = document.querySelector('.slider__card');
+const sliderCards = document.querySelectorAll('.slider__card');
 
-let sliderOffset = 0; // смещение слайдов от левого края
-let sliderCardWidth // = Number(window.getComputedStyle(sliderCard).width.slice(0, -2)); // ширина слайда
-let sliderLineColumnGap // = Number(window.getComputedStyle(sliderLine).columnGap.slice(0, -2));   // ширина между слайдами
-let sliderMove // = sliderCardWidth + sliderLineColumnGap; // шаг смещения слайдов
-
-window.addEventListener('DOMContentLoaded', funcSliderInit);
-sliderNext.addEventListener('click', () => { funcSliderMove(sliderMove) });
-sliderPrev.forEach((i) => i.addEventListener('click', () => { funcSliderMove(-sliderMove) }));
+let sliderOffsetClicks = 0; // суммарное количество смещений
 
 function funcSliderInit() {
-    sliderCardWidth = Number(window.getComputedStyle(sliderCard).width.slice(0, -2)); // ширина слайда
-    sliderLineColumnGap = Number(window.getComputedStyle(sliderLine).columnGap.slice(0, -2));   // ширина между слайдами
-    sliderMove = sliderCardWidth + sliderLineColumnGap; // шаг смещения слайдов
-    // console.log(sliderMove);
+    let sliderCardWidth = Number(window.getComputedStyle(sliderCards[0]).width.slice(0, -2)); // ширина 1 слайда
+    let sliderLineColumnGap = Number(window.getComputedStyle(sliderLine).columnGap.slice(0, -2));   // ширина между слайдами
+    let sliderMove = sliderCardWidth + sliderLineColumnGap; // шаг смещения слайдов
+    return sliderMove;
 }
 
-function funcSliderMove(sliderMove) {
-    sliderOffset = sliderOffset - sliderMove;
+function funcSliderRender(clicksCount) {
+    let sliderOffset = clicksCount * funcSliderInit();
     sliderLine.style.left = `${sliderOffset}px`;
-    // console.log(sliderOffset);
 }
+
+function funcSliderMove(clicksNumber) {
+    sliderOffsetClicks = sliderOffsetClicks - clicksNumber;
+    funcSliderRender(sliderOffsetClicks);
+}
+
+function funcSliderNext() {
+    if (-sliderOffsetClicks < (sliderCards.length - funcSliderViewed())) { funcSliderMove(1); }
+}
+
+function funcSliderPrev() {
+    if (sliderOffsetClicks < 0) { funcSliderMove(-1); }
+}
+
+function funcSliderViewed() {
+    let sliderLineWidthViewed = Number(window.getComputedStyle(sliderLine).width.slice(0, -2));   // ширина строки со слайдами
+    let sliderCardWidthViewed = Number(window.getComputedStyle(sliderCards[0]).width.slice(0, -2)); // ширина 1 слайда
+    let sliderLineColumnGap = Number(window.getComputedStyle(sliderLine).columnGap.slice(0, -2));   // ширина между слайдами
+
+    let viewed = (sliderLineWidthViewed - sliderLineWidthViewed % sliderCardWidthViewed) / sliderCardWidthViewed;
+
+    return viewed;
+}
+
+// обработчики событий
+window.addEventListener('resize', () => {
+    funcSliderRender(sliderOffsetClicks);
+});
+sliderNext.addEventListener('click', () => { funcSliderNext() });
+sliderPrev.forEach((i) => i.addEventListener('click', () => { funcSliderPrev() }));
