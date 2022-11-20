@@ -117,7 +117,7 @@ button:hover {
 }
 
 .header {
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 .logo {
@@ -263,7 +263,7 @@ button:hover {
     text-align: center;
 }
 
-.pets__cards {
+.pets__slider {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -492,9 +492,6 @@ button:hover {
     background: url(../../assets/noise_transparent_2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 
-/* modal.css */
-
-/* @import "modal.css"; */
 
 /* media */
 
@@ -560,10 +557,6 @@ button:hover {
 
     .pets {
         padding-top: 82px;
-    }
-
-    .pets__card_hide1 {
-        display: none;
     }
 
     .pets__area {
@@ -720,21 +713,13 @@ button:hover {
         padding-bottom: 42px;
     }
 
-    .pets__cards {
+    .pets__slider {
         flex-direction: column;
     }
 
     .pets__area {
         justify-content: center;
         width: 270px;
-    }
-
-    .pets__line {
-        /* justify-content: center; */
-    }
-
-    .pets__card_hide2 {
-        display: none;
     }
 
     .button_arrow_prev {

@@ -1,11 +1,13 @@
 const sliderLine = document.querySelector('.slider__line');
+const sliderCards = document.querySelectorAll('.slider__card');
+
 const sliderPrev = document.querySelectorAll('.slider__prev');
 const sliderNext = document.querySelector('.slider__next');
-const sliderCards = document.querySelectorAll('.slider__card');
+const sliderNum = document.querySelector('.slider__num');
 
 let sliderOffsetClicks = 0; // суммарное количество смещений
 
-function funcSliderWidth() {
+function funcSliderStep() {
     let sliderCardWidth = Number(window.getComputedStyle(sliderCards[0]).width.slice(0, -2)); // ширина 1 слайда
     let sliderLineColumnGap = Number(window.getComputedStyle(sliderLine).columnGap.slice(0, -2));   // ширина между слайдами
     let sliderMove = sliderCardWidth + sliderLineColumnGap; // шаг смещения слайдов
@@ -13,10 +15,11 @@ function funcSliderWidth() {
 }
 
 function funcSliderRender(clicksCount) {
-    let sliderOffset = clicksCount * funcSliderWidth();
+    let sliderOffset = clicksCount * funcSliderStep();
     sliderLine.style.left = `${sliderOffset}px`;
     if (clicksCount === 0) { sliderPrev.forEach((i) => i.classList.add('inactive')) } else { sliderPrev.forEach((i) => i.classList.remove('inactive')) };
-    if (clicksCount === (-(sliderCards.length - funcSliderViewed()))) { sliderNext.classList.add('inactive') } else { sliderNext.classList.remove('inactive') }
+    if (clicksCount === (-(sliderCards.length - funcSliderViewed()))) { sliderNext.classList.add('inactive') } else { sliderNext.classList.remove('inactive') };
+    if (sliderNum) { sliderNum.textContent = sliderOffsetClicks * (-1) + 1; }
 }
 
 function funcSliderMove(clicksNumber) {
@@ -47,3 +50,5 @@ window.addEventListener('resize', () => {
 });
 sliderNext.addEventListener('click', () => { funcSliderNext() });
 sliderPrev.forEach((i) => i.addEventListener('click', () => { funcSliderPrev() }));
+
+// offsetWidth !== 0
