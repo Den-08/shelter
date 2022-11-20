@@ -1,5 +1,5 @@
-/* css
-*/
+/* css */
+
 :root {
     font-size: 10px;
 }
@@ -120,8 +120,8 @@ button:hover {
 }
 
 .header {
-    top: 0;
-    position: sticky;
+    /* top: 0;
+    position: sticky; */
     padding-top: 30px;
     padding-bottom: 30px;
     background: #FFFFFF;
@@ -302,14 +302,28 @@ button:hover {
     box-shadow: none;
 }
 
-.pets__content_cards {
-
+/* .pets__line {    
     display: flex;
     align-items: center;
+
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 90px;
+} */
+
+.pets__area {
+    width: 1200px;
+}
+
+.pets__line {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    column-gap: 4rem;
     row-gap: 3rem;
+    max-height: 900px;
 }
 
 .pets__card {
@@ -515,12 +529,17 @@ button:hover {
 
 
 @media (max-width: 1279px) {
+
     .wrapper {
         margin: 0 30px;
     }
 
-    .pets__card_hide1 {
-        display: none;
+    .pets__area {
+        width: 580px;
+    }
+
+    .pets__line {
+        max-height: 1365px;
     }
 
     .footer__content {
@@ -583,8 +602,12 @@ button:hover {
         text-align: center;
     }
 
-    .pets__card_hide2 {
-        display: none;
+    .pets__area {
+        width: 270px;
+    }
+
+    .pets__line {
+        max-height: 1365px;
     }
 
     .pets__content_swiper {

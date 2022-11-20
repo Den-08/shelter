@@ -5,7 +5,7 @@ const sliderCards = document.querySelectorAll('.slider__card');
 
 let sliderOffsetClicks = 0; // суммарное количество смещений
 
-function funcSliderInit() {
+function funcSliderWidth() {
     let sliderCardWidth = Number(window.getComputedStyle(sliderCards[0]).width.slice(0, -2)); // ширина 1 слайда
     let sliderLineColumnGap = Number(window.getComputedStyle(sliderLine).columnGap.slice(0, -2));   // ширина между слайдами
     let sliderMove = sliderCardWidth + sliderLineColumnGap; // шаг смещения слайдов
@@ -13,7 +13,7 @@ function funcSliderInit() {
 }
 
 function funcSliderRender(clicksCount) {
-    let sliderOffset = clicksCount * funcSliderInit();
+    let sliderOffset = clicksCount * funcSliderWidth();
     sliderLine.style.left = `${sliderOffset}px`;
     if (clicksCount === 0) { sliderPrev.forEach((i) => i.classList.add('inactive')) } else { sliderPrev.forEach((i) => i.classList.remove('inactive')) };
     if (clicksCount === (-(sliderCards.length - funcSliderViewed()))) { sliderNext.classList.add('inactive') } else { sliderNext.classList.remove('inactive') }
