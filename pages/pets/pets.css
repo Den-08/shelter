@@ -302,15 +302,6 @@ button:hover {
     box-shadow: none;
 }
 
-/* .pets__line {    
-    display: flex;
-    align-items: center;
-
-    flex-direction: row;
-    justify-content: space-between;
-    column-gap: 90px;
-} */
-
 .pets__area {
     width: 1200px;
 }
