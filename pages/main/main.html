@@ -10,9 +10,12 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="stylesheet" type="text/css" href="../burger.css" />
     <link rel="stylesheet" type="text/css" href="../slider.css" />
+    <link rel="stylesheet" type="text/css" href="modal.css" />
+    <link rel="stylesheet" type="text/css" href="../popup.css" />
 </head>
 
 <body>
+
     <main class="main">
         <section class="start-screen">
             <header class="header">
@@ -114,62 +117,67 @@
                     <span>Our friends who</span><span> are looking for a house</span>
                 </h3>
 
+                <!-- JS slider_active -->
                 <div class="pets__cards slider">
-
                     <button class="button_arrow button_arrow_prev slider__prev">
                         <img src="../../assets/icons/arrow.svg" alt="previous">
                     </button>
-
 
                     <div class="pets__area slider__area">
                         <div class="pets__line slider__line">
                             <div class="pets__card slider__card">
                                 <img src="../../assets/images/pets-katrine.png" alt="pets-katrine">
                                 <p>Katrine</p>
-                                <button class="button_primary card__button">Learn more</button>
+                                <button class="button_primary card__button popup__button" data-path="pets-katrine">Learn
+                                    more</button>
                             </div>
-                            <!-- pets__card_hide2 -->
                             <div class="pets__card slider__card">
                                 <img src="../../assets/images/pets-jennifer.png" alt="pets-jennifer">
                                 <p>Jennifer</p>
-                                <button class="button_primary card__button">Learn more</button>
+                                <button class="button_primary card__button popup__button"
+                                    data-path="pets-jennifer">Learn
+                                    more</button>
                             </div>
-                            <!-- pets__card_hide1 -->
                             <div class="pets__card slider__card">
                                 <img src="../../assets/images/pets-woody.png" alt="pets-woody">
                                 <p>Woody</p>
-                                <button class="button_primary card__button">Learn more</button>
+                                <button class="button_primary card__button popup__button" data-path="pets-woody">Learn
+                                    more</button>
                             </div>
 
                             <div class="pets__card slider__card">
                                 <img src="../../assets/images/pets-sophia.png" alt="pets-sophia">
                                 <p>Sophia</p>
-                                <button class="button_primary card__button">Learn more</button>
+                                <button class="button_primary card__button popup__button" data-path="pets-sophia">Learn
+                                    more</button>
                             </div>
                             <div class="pets__card slider__card">
                                 <img src="../../assets/images/pets-timmy.png" alt="pets-timmy">
                                 <p>Timmy</p>
-                                <button class="button_primary card__button">Learn more</button>
+                                <button class="button_primary card__button popup__button" data-path="pets-timmy">Learn
+                                    more</button>
                             </div>
                             <div class="pets__card slider__card">
                                 <img src="../../assets/images/pets-charly.png" alt="pets-charly">
                                 <p>Charly</p>
-                                <button class="button_primary card__button">Learn more</button>
+                                <button class="button_primary card__button popup__button" data-path="pets-charly">Learn
+                                    more</button>
                             </div>
 
                             <div class="pets__card slider__card">
                                 <img src="../../assets/images/pets-scarlett.png" alt="pets-scarlett">
                                 <p>Scarlett</p>
-                                <button class="button_primary card__button">Learn more</button>
+                                <button class="button_primary card__button popup__button"
+                                    data-path="pets-scarlett">Learn more</button>
                             </div>
                             <div class="pets__card slider__card">
                                 <img src="../../assets/images/pets-freddie.png" alt="pets-freddie">
                                 <p>Freddie</p>
-                                <button class="button_primary card__button">Learn more</button>
+                                <button class="button_primary card__button popup__button" data-path="pets-freddie">Learn
+                                    more</button>
                             </div>
                         </div>
                     </div>
-
 
                     <div class="pets__buttons2">
                         <button class="button_arrow button_arrow_prev2 slider__prev">
@@ -180,11 +188,166 @@
                         </button>
                     </div>
                 </div>
+                <!-- JS slider_active -->
 
                 <a href="../pets/pets.html"><button class="button_primary pets__button">Get to know the
                         rest</button></a>
             </div>
         </section>
+
+        <!-- JS popup_active -->
+        <div class="popup">
+            <div class="popup__overlay">
+                <div class="popup__modal modal" data-target="pets-katrine">
+                    <div class="modal__picture">
+                        <img class="modal__image" src="../../assets/images/pets-katrine.png" alt="pets-katrine">
+                    </div>
+                    <div class="modal__content">
+                        <h3 class="modal__title">Katrine</h3>
+                        <h4 class="modal__subtitle">Cat - British Shorthair</h4>
+                        <p class="modal__text">Katrine is a beautiful girl. She is as soft as the finest velvet with a
+                            thick lush fur. Will
+                            love you until the last breath she takes as long as you are the one. She is picky about her
+                            affection. She loves cuddles and to stretch into your hands for a deeper relaxations.</p>
+                        <ul class="modal__ul">
+                            <li class="modal__li"><b>Age:</b> 2 months</li>
+                            <li class="modal__li"><b>Inoculations:</b> none</li>
+                            <li class="modal__li"><b>Diseases:</b> none</li>
+                            <li class="modal__li"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup__modal modal" data-target="pets-jennifer">
+                    <div class="modal__picture">
+                        <img class="modal__image" src="../../assets/images/pets-jennifer.png" alt="pets-jennifer">
+                    </div>
+                    <div class="modal__content">
+                        <h3 class="modal__title">Jennifer</h3>
+                        <h4 class="modal__subtitle">Dog - Labrador</h4>
+                        <p class="modal__text">Jennifer is a sweet 2 months old Labrador that is patiently waiting to
+                            find a new forever home. This girl really enjoys being able to go outside to run and play,
+                            but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+                        <ul class="modal__ul">
+                            <li class="modal__li"><b>Age:</b> 2 months</li>
+                            <li class="modal__li"><b>Inoculations:</b> none</li>
+                            <li class="modal__li"><b>Diseases:</b> none</li>
+                            <li class="modal__li"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup__modal modal" data-target="pets-woody">
+                    <div class="modal__picture">
+                        <img class="modal__image" src="../../assets/images/pets-woody.png" alt="pets-woody">
+                    </div>
+                    <div class="modal__content">
+                        <h3 class="modal__title">Woody</h3>
+                        <h4 class="modal__subtitle">Dog - Golden Retriever</h4>
+                        <p class="modal__text">Woody is a handsome 3 1/2 year old boy. Woody does know basic commands
+                            and is a smart pup. Since he is on the stronger side, he will learn a lot from your
+                            training. Woody will be happier when he finds a new family that can spend a lot of time with
+                            him.</p>
+                        <ul class="modal__ul">
+                            <li class="modal__li"><b>Age:</b> 2 months</li>
+                            <li class="modal__li"><b>Inoculations:</b> none</li>
+                            <li class="modal__li"><b>Diseases:</b> none</li>
+                            <li class="modal__li"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup__modal modal" data-target="pets-sophia">
+                    <div class="modal__picture">
+                        <img class="modal__image" src="../../assets/images/pets-sophia.png" alt="pets-sophia">
+                    </div>
+                    <div class="modal__content">
+                        <h3 class="modal__title">Sophia</h3>
+                        <h4 class="modal__subtitle">Dog - Shih tzu</h4>
+                        <p class="modal__text">Sophia here and I'm looking for my forever home to live out the best
+                            years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on
+                            a leash, go potty outside, bark and play with toys and I still need some practice.</p>
+                        <ul class="modal__ul">
+                            <li class="modal__li"><b>Age:</b> 2 months</li>
+                            <li class="modal__li"><b>Inoculations:</b> none</li>
+                            <li class="modal__li"><b>Diseases:</b> none</li>
+                            <li class="modal__li"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup__modal modal" data-target="pets-timmy">
+                    <div class="modal__picture">
+                        <img class="modal__image" src="../../assets/images/pets-timmy.png" alt="pets-timmy">
+                    </div>
+                    <div class="modal__content">
+                        <h3 class="modal__title">Timmy</h3>
+                        <h4 class="modal__subtitle">Cat - British Shorthair</h4>
+                        <p class="modal__text">Timmy is an adorable grey british shorthair male. He loves to play and
+                            snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and
+                            enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.</p>
+                        <ul class="modal__ul">
+                            <li class="modal__li"><b>Age:</b> 2 months</li>
+                            <li class="modal__li"><b>Inoculations:</b> none</li>
+                            <li class="modal__li"><b>Diseases:</b> none</li>
+                            <li class="modal__li"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup__modal modal" data-target="pets-charly">
+                    <div class="modal__picture">
+                        <img class="modal__image" src="../../assets/images/pets-charly.png" alt="pets-charly">
+                    </div>
+                    <div class="modal__content">
+                        <h3 class="modal__title">Charly</h3>
+                        <h4 class="modal__subtitle">Dog - Jack Russell Terrier</h4>
+                        <p class="modal__text">This cute boy, Charly, is three years old and he likes adults and kids.
+                            He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots
+                            of energy, and loves to run and play. We think a fenced yard would make him very happy.</p>
+                        <ul class="modal__ul">
+                            <li class="modal__li"><b>Age:</b> 2 months</li>
+                            <li class="modal__li"><b>Inoculations:</b> none</li>
+                            <li class="modal__li"><b>Diseases:</b> none</li>
+                            <li class="modal__li"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup__modal modal" data-target="pets-scarlett">
+                    <div class="modal__picture">
+                        <img class="modal__image" src="../../assets/images/pets-scarlett.png" alt="pets-scarlett">
+                    </div>
+                    <div class="modal__content">
+                        <h3 class="modal__title">Scarlett</h3>
+                        <h4 class="modal__subtitle">Dog - Jack Russell Terrier</h4>
+                        <p class="modal__text">Scarlett is a happy, playful girl who will make you laugh and smile. She
+                            forms a bond quickly and will make a loyal companion and a wonderful family dog or a good
+                            companion for a single individual too since she likes to hang out and be with her human.</p>
+                        <ul class="modal__ul">
+                            <li class="modal__li"><b>Age:</b> 2 months</li>
+                            <li class="modal__li"><b>Inoculations:</b> none</li>
+                            <li class="modal__li"><b>Diseases:</b> none</li>
+                            <li class="modal__li"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup__modal modal" data-target="pets-freddie">
+                    <div class="modal__picture">
+                        <img class="modal__image" src="../../assets/images/pets-freddie.png" alt="pets-freddie">
+                    </div>
+                    <div class="modal__content">
+                        <h3 class="modal__title">Freddie</h3>
+                        <h4 class="modal__subtitle">Cat - British Shorthair</h4>
+                        <p class="modal__text">Freddie is a little shy at first, but very sweet when he warms up. He
+                            likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his
+                            human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his
+                            forever home.</p>
+                        <ul class="modal__ul">
+                            <li class="modal__li"><b>Age:</b> 2 months</li>
+                            <li class="modal__li"><b>Inoculations:</b> none</li>
+                            <li class="modal__li"><b>Diseases:</b> none</li>
+                            <li class="modal__li"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JS popup_active -->
 
         <section class="help" id="help">
             <div class="wrapper help__content">
@@ -320,6 +483,7 @@
 
     <script src="../burger.js"></script>
     <script src="../slider.js"></script>
+    <script src="../popup.js"></script>
 </body>
 
 </html>
