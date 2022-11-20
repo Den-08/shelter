@@ -272,16 +272,10 @@ button:hover {
 }
 
 .pets__area {
-    /* width: 82.5%; */
-    /* display: flex; */
-    /* flex-direction: row;
-    align-items: center; */
-    /* justify-content: space-between; */
-    /* column-gap: 90px; */
+    width: 990px;
 }
 
 .pets__line {
-    /* width: 82.5%; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -574,6 +568,7 @@ button:hover {
 
     .pets__area {
         justify-content: space-between;
+        width: 580px;
     }
 
     .pets__line {
@@ -731,6 +726,7 @@ button:hover {
 
     .pets__area {
         justify-content: center;
+        width: 270px;
     }
 
     .pets__line {
