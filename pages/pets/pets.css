@@ -184,14 +184,14 @@ button:hover {
     color: #292929;
 }
 
+.list__link_active {
+    color: #292929;
+    border-bottom: solid 3px #F1CDB3;
+}
+
 .list__link_disabled:hover {
     cursor: auto;
     color: #545454;
-}
-
-.list__link_active {
-    color: #545454;
-    border-bottom: solid 3px #F1CDB3;
 }
 
 .list__item {
@@ -526,7 +526,7 @@ button:hover {
     }
 
     .pets__area {
-        width: 580px;
+        width: 890px;
     }
 
     .pets__line {
@@ -572,6 +572,12 @@ button:hover {
 
     .footer__image {
         margin-top: 62px;
+    }
+}
+
+@media (max-width: 952px) {
+    .pets__area {
+        width: 580px;
     }
 }
 
